@@ -19,6 +19,25 @@ function askAboutUppercase(){
 
 // Repeat for other criteria; for the number of characters, use a prompt statement. Google it. NOTE: prompt statements think any value you provide is a string. You will need to convert it to a number.
 
+function askAboutLowercase(){
+  allowLowerCase = confirm("Are lower case characters allowed?");
+  console.log(allowLowerCase);
+}
+
+function askAboutNumbers(){
+  allowNumbers = confirm("Are numbers allowed?");
+  console.log(allowNumbers);
+}
+
+function askAboutSpecials(){
+  allowSpecials = confirm("Are special characters allowed?");
+  console.log(allowSpecials);
+}
+
+function askCharacterCount(){
+  passwordCharacterCount = window.prompt("How many characters do you want?");
+  console.log(passwordCharacterCount);
+}
 
 // Once all the criteria are determined, this function will generate the password. You can create other functions also if you need them.
 function generatePassword(){
@@ -37,8 +56,10 @@ function writePassword() {
 
   // ask the questions first
   askAboutUppercase();
-
-
+  askAboutLowercase();
+  askAboutNumbers();
+  askAboutSpecials();
+  askCharacterCount();
 
 
   var password = generatePassword();
