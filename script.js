@@ -52,7 +52,6 @@ function chooseRandomNumber(min, max){
 
 
 //create function to grab from character options
-var AllChars = allowLowerCase allowNumbers, allowUppercase, allowSpecials]; 
 
 function createArray (PassGen) {
   //create empty array
@@ -63,10 +62,7 @@ function createArray (PassGen) {
       //var for empty string
       var HoldPassString;
       //var for result of generated number function 
-      var desiredlength = chooseRandomNumber(6, 12);
-        for( var j = 0; j<desiredlength; j++) {
-          HoldPassString = HoldPassString + AllChars[chooseRandomNumber(0,75)]
-        }
+    
       EmptyPass.push(HoldPassString);
     }
     //
@@ -74,10 +70,13 @@ function createArray (PassGen) {
 }
 
 // Once all the criteria are determined, this function will generate the password. You can create other functions also if you need them.
-function generatePassword(){
-
-
-      var finalized = generatePassword
+function generatePassword(characters){
+    for( var j = 0; j<Input; j++){
+      var index = Math.floor(Math.random) * characters.length)
+      HoldPassString = HoldPassString + characters[index]]
+    }
+      return HoldPassString
+      //var finalized = generatePassword
 }
 
   var finalResult = '';
@@ -97,13 +96,18 @@ function writePassword() {
 
   // ask the questions first
   askAboutUppercase();
+  if allowUppercase({
+    passwordCharacters = passwordCharacters.concat(uppercaseChars);
+  }
+
+  )
   askAboutLowercase();
   askAboutNumbers();
   askAboutSpecials();
   askCharacterCount();
 
 
-  var password = generatePassword();
+  var password = generatePassword(passwordCharacters);
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
@@ -113,6 +117,6 @@ generateBtn.addEventListener("click", writePassword);
 
 
 //Random number generator
-function chooseRandomNumber(min, max){
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+//function chooseRandomNumber(min, max){
+  //return Math.floor(Math.random() * (max - min + 1) + min);
+//}
