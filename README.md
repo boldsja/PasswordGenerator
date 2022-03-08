@@ -9,6 +9,6 @@ The purpose of this project was to make a password generator depending on input 
 
 
 ## Link to Final Page
-[Password Generator link to final page]() 
+[Password Generator link to final page](https://boldsja.github.io/PasswordGenerator/) 
 
-[Github Repo]()
+[Github Repo](https://github.com/boldsja/PasswordGenerator)
